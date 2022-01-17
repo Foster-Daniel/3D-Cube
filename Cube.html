@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cube.css">
+    <title>Cube</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="scene">
+        <div id="cube">
+            <div style="background-color: rgb(127, 255, 212, 0.7);" class="cube-face bottom"></div>
+            <div style="background-color: rgb(255, 0, 0, 0.7);" class="cube-face top"></div>
+            <div style="background-color: rgb(255, 255, 0, 0.7);" class="cube-face front"></div>
+            <div style="background-color: rgb(0, 0, 255, 0.7);" class="cube-face back"></div>
+            <div style="background-color: rgb(255, 166, 0, 0.7);" class="cube-face left"></div>
+            <div style="background-color: rgb(0, 255, 0, 0.7);" class="cube-face right"></div>
+        </div>
+    </div>
+    <div id="controls">
+        <input type="range" name="scale" oninput="changeScale(this.value)" min="75" max="350" id="scale-slider">
+        <div id="buttons">
+            <button id="yellow" style="background-color: rgb(255, 255, 0, 0.2)" data-colour="rgb(255, 255, 0, 0.2)" onclick="rotateCube(this)">Yellow</button>
+            <button id="red" data-colour="rgb(255, 0, 0, 0.2)" onclick="rotateCube(this)">Red</button>
+            <button id="green" data-colour="rgb(0, 255, 0, 0.2)" onclick="rotateCube(this)">Green</button>
+            <button id="orange" data-colour="rgb(255, 166, 0, 0.2)" onclick="rotateCube(this)">Orange</button>
+            <button id="blue" data-colour="rgb(0, 0, 255, 0.2)" onclick="rotateCube(this)">Blue</button>
+            <button id="turquoise" data-colour="rgb(170, 235, 212, 0.2)" onclick="rotateCube(this)">Turquoise</button>
+        </div>
+    </div>
+    <script src="Cube.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(150, 150, 150);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#scene {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    margin: 10em;
+}
+#cube {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.cube-face {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border: 2px solid black;
+}
+
+.front { transform: rotateY(0deg) translateZ(100px); }
+.right { transform: rotateY(90deg) translateZ(100px); }
+.back { transform: rotateY(180deg) translateZ(100px); }
+.left { transform: rotateY(-90deg) translateZ(100px); }
+.top { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.cube.yellow { transform: rotateY(0deg); }
+.cube.green { transform: rotateY(-90deg); }
+.cube.blue { transform: rotateY(-180deg); }
+.cube.orange { transform: rotateY(90deg); }
+.cube.red { transform: rotateX(-90deg); }
+.cube.turquoise { transform: rotateX(90deg); }
+input {
+    width: 100%;
+}
+#controls {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border: 3px solid whitesmoke;
+    margin-top: 5em;
+    background-color: whitesmoke;
+    width: 50%;
+    padding: .5em;
+}
+#buttons {
+    display: flex;
+    border: 5px solid white;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+#buttons > button {
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1em;
+    transition: all 0.25s linear;
+}
+
+#buttons > button:hover {
+    transition: all 0.1s linear;
+    transform: scale(1.05);
+}
